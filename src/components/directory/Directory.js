@@ -10,38 +10,38 @@ class Directory extends Component {
     this.state = {
       section: [
         {
-          title: "monitors",
+          title: "computer",
           imageUrl:
-            "https://backend.techstoreltd.com/Uploads/Photo/MO00307_1.jpg",
+            "https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008__340.jpg",
           id: 1,
-          linkUrl: "shop/monitors"
+          linkUrl: "shop/computer"
         },
         {
           title: "phones",
           imageUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhXbJHdZSqGzO5ZqVS2-mfwLd0Ny2JC9vTaf7m_JAIdi3kKSJdA&s",
+            "https://cdn.pixabay.com/photo/2016/11/29/12/30/android-1869510__340.jpg",
           id: 2,
           linkUrl: "shop/phones"
         },
         {
           title: "drones",
           imageUrl:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoe5RVyozly2rg77OLhXUUnUs5fTI9VejqgB41IBZENNcc0WBR&s",
+            "https://cdn.pixabay.com/photo/2015/12/07/14/18/drone-1080844_960_720.jpg",
           id: 3,
           linkUrl: "shop/drones"
         },
         {
-          title: "printers",
+          title: "headphones",
           imageUrl:
-            "https://www.costco.co.uk/medias/sys_master/products/h01/h01/10123080597534.jpg",
+            "https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983__340.jpg",
           size: "large",
           id: 4,
-          linkUrl: "shop/printers"
+          linkUrl: "shop/headphones"
         },
         {
           title: "watches",
           imageUrl:
-            "https://n4.sdlcdn.com/imgs/i/g/x/orion-nk1580YL05j-Leather-Analog-Men-SDL869907918-1-e6950.jpg",
+            "https://cdn.pixabay.com/photo/2018/02/24/20/39/clock-3179167__340.jpg",
           size: "large",
           id: 5,
           linkUrl: "shop/multimedia"

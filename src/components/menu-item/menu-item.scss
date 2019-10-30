@@ -7,11 +7,24 @@
   justify-content: center;
   border: 1px solid black;
   margin: 0 7.5px 15px;
-  background: no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+
+
+    & .background-image {
+      transform: scale(1.1);
+      transition: all 4s ease-in-out
+    }
+
+    & .content {
+      opacity: 0.9
+    }
+
+    ;
+  }
+
 
   &.large {
     height: 380px
@@ -25,6 +38,16 @@
     margin-left: 7.5px;
   }
 
+  .background-image {
+    width: 100%;
+    height: 100%;
+    background: no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
   .content {
     height: 90px;
     padding: 0 25px;
@@ -33,6 +56,11 @@
     align-items: center;
     justify-content: center;
     border: 1px solid black;
+    background-color: white;
+    opacity: 0.8;
+    position: absolute;
+
+
 
     .title {
       font-weight: bold;
