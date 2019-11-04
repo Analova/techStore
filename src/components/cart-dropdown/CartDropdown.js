@@ -8,6 +8,8 @@ import CartItem from "../cart-item/CartItem";
 
 import "./cart-dropdown.scss";
 
+import { createStructuredSelector } from "reselect";
+
 const CartDropdown = ({ cartItem }) => {
   return (
     <div className="cart-dropdown">
@@ -21,8 +23,8 @@ const CartDropdown = ({ cartItem }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  cartItem: selectCartItems(state)
+const mapStateToProps = createStructuredSelector({
+  cartItem: selectCartItems
 });
 
 export default connect(mapStateToProps)(CartDropdown);
