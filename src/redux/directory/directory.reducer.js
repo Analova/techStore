@@ -1,11 +1,11 @@
 const INITIAL_STATE = {
   sections: [
     {
-      title: "computer",
+      title: "computers",
       imageUrl:
         "https://cdn.pixabay.com/photo/2016/02/19/10/00/laptop-1209008__340.jpg",
       id: 1,
-      linkUrl: "shop/computer"
+      linkUrl: "shop/computers"
     },
     {
       title: "phones",
@@ -35,7 +35,7 @@ const INITIAL_STATE = {
         "https://cdn.pixabay.com/photo/2018/02/24/20/39/clock-3179167__340.jpg",
       size: "large",
       id: 5,
-      linkUrl: "shop/multimedia"
+      linkUrl: "shop/watches"
     }
   ]
 };
