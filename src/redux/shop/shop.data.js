@@ -132,7 +132,7 @@ const SHOP_DATA = {
       }
     ]
   },
-  drone: {
+  drones: {
     id: 3,
     title: "Drones",
     routeName: "drone",
