@@ -7,7 +7,7 @@ import Header from "./components/header/Header";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/SignInAndSignUp";
 import Checkout from "./pages/checkout/Checkout";
 
-import "./App.css";
+import { GlobalStyle } from "./global.styles";
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
@@ -50,6 +50,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <GlobalStyle />
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
