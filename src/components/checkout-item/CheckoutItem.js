@@ -15,8 +15,8 @@ import {
   RemoveButtonContainer
 } from "./checkout-item.styles";
 
-const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
-  const { name, imageUrl, price, quantity } = cartItem;
+const CheckoutItem = ({ cartItems, clearItem, addItem, removeItem }) => {
+  const { name, imageUrl, price, quantity } = cartItems;
   return (
     <CheckoutItemContainer>
       <ImageContainer>
@@ -24,14 +24,14 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
       </ImageContainer>
       <TextContainer>{name}</TextContainer>
       <QuantityContainer>
-        <div className="arrow" onClick={() => removeItem(cartItem)}>
+        <div className="arrow" onClick={() => removeItem(cartItems)}>
           &#10094;
         </div>
         <span>{quantity}</span>
-        <div onClick={() => addItem(cartItem)}>&#10095;</div>
+        <div onClick={() => addItem(cartItems)}>&#10095;</div>
       </QuantityContainer>
       <TextContainer>{price}</TextContainer>
-      <RemoveButtonContainer onClick={() => clearItem(cartItem)}>
+      <RemoveButtonContainer onClick={() => clearItem(cartItems)}>
         {" "}
         &#10005;
       </RemoveButtonContainer>
@@ -45,7 +45,4 @@ const mapDispatchToProps = dispatch => ({
   removeItem: item => dispatch(removeItem(item))
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(CheckoutItem);
+export default connect(null, mapDispatchToProps)(CheckoutItem);

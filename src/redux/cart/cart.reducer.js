@@ -3,7 +3,7 @@ import { addItemToCart, removeItemFromCart } from "./cart.utils";
 
 const INITIAL_STATE = {
   hidden: true,
-  cartItem: []
+  cartItems: []
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -16,19 +16,19 @@ const cartReducer = (state = INITIAL_STATE, action) => {
     case CartActionTypes.ADD_ITEM:
       return {
         ...state,
-        //cartItem: [...state.cartItem, action.payload]
-        cartItem: addItemToCart(state.cartItem, action.payload)
+        //cartItems: [...state.cartItems, action.payload]
+        cartItems: addItemToCart(state.cartItems, action.payload)
       };
     case CartActionTypes.REMOVE_ITEM:
       return {
         ...state,
-        cartItem: removeItemFromCart(state.cartItem, action.payload)
+        cartItems: removeItemFromCart(state.cartItems, action.payload)
       };
     case CartActionTypes.CLEAR_ITEM_FROM_CART:
       return {
         ...state,
-        cartItem: state.cartItem.filter(
-          cartItem => cartItem.id !== action.payload.id
+        cartItems: state.cartItems.filter(
+          cartItems => cartItems.id !== action.payload.id
         )
       };
 

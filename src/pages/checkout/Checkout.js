@@ -15,7 +15,7 @@ import {
   TotalContainer
 } from "./checkout.styles";
 
-const Checkout = ({ cartItem, total }) => {
+const Checkout = ({ cartItems, total }) => {
   return (
     <CheckoutPageContainer>
       <CheckoutHeaderContainer>
@@ -36,8 +36,8 @@ const Checkout = ({ cartItem, total }) => {
         </HeaderBlockContainer>
       </CheckoutHeaderContainer>
 
-      {cartItem.map(cartItem => (
-        <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+      {cartItems.map(cartItems => (
+        <CheckoutItem key={cartItems.id} cartItems={cartItems} />
       ))}
 
       <TotalContainer>
@@ -47,7 +47,7 @@ const Checkout = ({ cartItem, total }) => {
   );
 };
 const mapStateToProps = createStructuredSelector({
-  cartItem: selectCartItems,
+  cartItems: selectCartItems,
   total: selectCartTotal
 });
 export default connect(mapStateToProps)(Checkout);
