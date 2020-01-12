@@ -65,7 +65,7 @@ export default class SignUp extends Component {
             name="displayName"
             value={displayName}
             onChange={this.handleChange}
-            label="Dispay name"
+            label="Name"
             required
           ></FormInput>
           <FormInput
